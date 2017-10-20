@@ -1,0 +1,24 @@
+/*
+*	Es importante este archivo
+*	para indicar el orden en que se desea que se compilen los scss,
+*	porque si no se compilarán en orden alfabético
+*/
+
+
+/****************** GENERAL  ******************/
+/**********************************************/
+@import 'general/vars';
+@import 'general/mixins';
+@import 'general/utilities.scss';
+
+/****************** Estilos de nuestro tema ******************/
+@import 'general.scss';
+@import 'components/header.scss';
+@import 'components/footer.scss';
+@import 'components/block-post.scss';
+@import 'components/block-comments.scss';
+@import 'components/block-add-comment.scss';
+@import 'components/block-bio.scss';
+@import 'components/block-recent-posts.scss';
+@import 'components/block-categories.scss';
+@import 'components/block-archive.scss';

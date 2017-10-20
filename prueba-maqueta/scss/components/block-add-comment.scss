@@ -1,0 +1,75 @@
+.block-add-comment{	
+    margin-top: 50px;
+    margin-bottom: 50px;
+	h3{
+		font-size:20px;
+	}
+	form{
+		.form-group{
+			margin-bottom: 0;
+		}
+		margin-top: 20px;
+		label{
+			width: 100%;
+			margin-top:15px;
+		}
+		.radio-buttons{
+			.item-radio-buttons{
+				display: inline-block;
+				margin-right: 15px;
+				label{
+					width: auto;
+					vertical-align: middle;
+					margin-left: 5px;
+					margin-top:0;
+				}				
+			}
+		}
+		.checkbox{
+			.item-checkbox{
+				display: inline-block;
+				margin-right: 20px;
+				label{
+					width: auto;
+					vertical-align: middle;
+					margin-left: 15px;
+					margin-top:0;
+					padding-left: 0;
+				}		
+				input{
+					margin:4px 0;
+				}		
+			}
+		}
+	}
+	button{
+	    margin-top: 20px;
+	    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+		background: #fefefe;
+		background: -moz-linear-gradient(top, #fefefe 0%, #e8e8e8 99%);
+		background: -webkit-linear-gradient(top, #fefefe 0%,#e8e8e8 99%);
+		background: linear-gradient(to bottom, #fefefe 0%,#e8e8e8 99%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e8e8e8',GradientType=0 );
+	}
+}
+
+
+@media(min-width:768px){
+	.block-add-comment{
+		margin-bottom: 0;
+		form{
+			margin-top: 20px;
+			label{				
+				margin-top:15px;
+			}
+		}
+	}
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

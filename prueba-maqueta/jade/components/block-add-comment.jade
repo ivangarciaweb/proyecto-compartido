@@ -1,0 +1,82 @@
+section.block-add-comment
+	h3 Publicar un comentario
+	p 
+		| Tu email 
+		em nunca 
+		| será publicado o compartido. Los campos requeridos están marcados con un *
+	.row
+		form
+			.form-group.clearfix
+				.col-sm-6
+					label.control-label(for="name") Nombre *		
+					input#name.form-control(type="text", placeholder="Escribe tu nombre", name="name")
+				.col-sm-6
+					label.control-label(for="email") Email *		
+					input#email.form-control(type="email", placeholder="Escribe tu email", name="email")
+			.form-group.clearfix
+				.col-sm-6
+					label.control-label(for="phone") Teléfono *		
+					input#phone.form-control(type="tel", placeholder="Escribe tu teléfono", name="phone")
+				.col-sm-6
+					label.control-label(for="provincias") Provincias		
+					select#provincias.form-control(name="provincias")
+						option(value="marid") Madrid
+						option(value="cuenca") Cuenca
+						option(value="guadalajara") Guadalajara
+						option(value="alicante") Alicante
+						option(value="barcelona") Barcelona
+			.form-group.clearfix
+				.col-sm-12
+					label.control-label(for="web") Sitio Web		
+					input#web.form-control(type="url", placeholder="Escribe tu sitio web", name="web")
+			.form-group.clearfix
+				.col-sm-12
+					label Seleccionar una opción
+					.radio-buttons
+						.item-radio-buttons
+							input#opcion1(type="radio", name="options", value="opcion1", checked="") 
+							label(for="opcion1") Opción 1
+						.item-radio-buttons
+							input#opcion2(type="radio", name="options", value="opcion2") 
+							label(for="opcion2") Opción 2
+						.item-radio-buttons
+							input#opcion3(type="radio", name="options", value="opcion3") 
+							label(for="opcion3") Opción 3
+						.item-radio-buttons
+							input#opcion4(type="radio", name="options", value="opcion4") 
+							label(for="opcion4") Opción 4
+						.item-radio-buttons
+							input#opcion5(type="radio", name="options", value="opcion5") 
+							label(for="opcion5") Opción 5
+						.item-radio-buttons
+							input#opcion6(type="radio", name="options", value="opcion6") 
+							label(for="opcion6") Opción 6
+			.form-group.clearfix
+				.col-sm-12
+					label Elegir Preferencias
+					.checkbox
+						.item-checkbox
+							input#preferencia1(type="checkbox", name="preferencia1", value="preferencia1")
+							label(for="preferencia1") Preferencia 1
+						.item-checkbox
+							input#preferencia2(type="checkbox", name="preferencia2", value="preferencia2")
+							label(for="preferencia2") Preferencia 2
+						.item-checkbox
+							input#preferencia3(type="checkbox", name="preferencia3", value="preferencia3")
+							label(for="preferencia3") Preferencia 3
+						.item-checkbox
+							input#preferencia4(type="checkbox", name="preferencia4", value="preferencia4")
+							label(for="preferencia4") Preferencia 4
+						.item-checkbox
+							input#preferencia5(type="checkbox", name="preferencia5", value="preferencia5")
+							label(for="preferencia5") Preferencia 5
+						.item-checkbox
+							input#preferencia6(type="checkbox", name="preferencia6", value="preferencia6")
+							label(for="preferencia6") Preferencia 6
+			.form-group.clearfix
+				.col-sm-12
+					label(for="textarea-comment") Comentario
+					textarea#textarea-comment.form-control(name="comment", placeholder="Escribe tu comentario")
+			.form-group.clearfix
+				.col-sm-12
+					button.btn.btn-default(type="submit") Publicar Comentario      

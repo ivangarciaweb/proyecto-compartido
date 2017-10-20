@@ -1,0 +1,24 @@
+extends ./layout.jade
+block content
+	.container
+		.row
+			.col-sm-9
+				section.content
+					.row
+						include components/block-post.jade
+				section.comments
+					.row
+						include components/block-comments.jade
+						include components/block-comments.jade
+						include components/block-comments.jade
+						include components/block-comments.jade
+						include components/block-comments.jade
+					.row
+						include components/block-add-comment.jade
+
+			.col-sm-3
+				aside
+					include components/block-bio.jade
+					include components/block-recent-posts.jade
+					include components/block-categories.jade
+					include components/block-archive.jade

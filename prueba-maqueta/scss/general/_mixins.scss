@@ -1,0 +1,140 @@
+//MIXINS
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius:$radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin shadow ($x,$y,$blur,$color){
+    -webkit-box-shadow:$x $y $blur $color;
+    -moz-box-shadow:$x $y $blur $color;
+    box-shadow:$x $y $blur $color;
+}
+
+@mixin shadow-none (){
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+
+@mixin shadow-inset ($x,$y,$blur,$color){
+    -webkit-box-shadow:inset $x $y $blur $color;
+    -moz-box-shadow:inset $x $y $blur $color;
+    box-shadow:inset $x $y $blur $color;
+}
+
+@mixin shadow-double ($shadow, $inset){
+  -webkit-box-shadow:$shadow, $inset;
+  -moz-box-shadow:$shadow, $inset;
+  box-shadow:$shadow, $inset;
+}
+
+@mixin linear-gradient($from, $to){
+    background-color:$to;
+    background:-moz-linear-gradient($from,$to);
+    background-image:-o-linear-gradient($from,$to);
+    background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1,$to));
+    background-image:-webkit-linear-gradient($from,$to);
+    background-image:-ms-linear-gradient($from,$to);
+    background-image:linear-gradient($from,$to);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin linear-gradient-triple($color1,$color2,$color3){
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, $color1),
+        color-stop(0.5, $color2),
+        color-stop(1, $color3)
+    );
+    background-image: -o-linear-gradient(bottom, $color1 0%, $color2 50%, $color3 100%);
+    background-image: -moz-linear-gradient(bottom, $color1 0%, $color2 50%, $color3 100%);
+    background-image: -webkit-linear-gradient(bottom, $color1 0%, $color2 50%, $color3 100%);
+    background-image: -ms-linear-gradient(bottom, $color1 0%, $color2 50%, $color3 100%);
+    background-image: linear-gradient(to bottom, $color1 0%, $color2 50%, $color3 100%);
+}
+
+@mixin box-sizing(){
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin background-rgba($color, $opacity:0.2) {
+   background-color: rgba($color, $opacity);
+   background: rgba($color, $opacity);
+}
+
+@mixin opacity($opacity: $default-opacity) {
+   filter:         alpha(opacity=($opacity * 100));
+   -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")";
+   -moz-opacity:   $opacity;
+   -khtml-opacity: $opacity;
+   opacity:        $opacity;
+}
+
+// Example
+//    input.cajaTexto {
+//        @include placeholder{color:red; font-weight:bold; etc..}
+//    }
+@mixin placeholder {
+   &::-webkit-input-placeholder {
+    @content;
+   }
+
+   &:-moz-placeholder { /* Firefox 18- */
+    @content;
+   }
+
+   &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+   }
+
+   &:-ms-input-placeholder {
+    @content;
+   }
+}

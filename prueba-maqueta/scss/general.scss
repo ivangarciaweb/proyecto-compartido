@@ -1,0 +1,57 @@
+body{ 
+    font-family: Helvetica;
+    font-size: 14px;
+    overflow-x: hidden;
+    color: #333333;
+}
+
+main{
+}
+
+aside{
+	margin:0;
+}
+
+section.content, section.comments{
+	padding-right:0;
+	margin: 0 15px;
+}
+
+
+a{color:#000000;}
+
+a[class*="icn-"]{
+	display: inline-block;
+	width:30px;
+	height:30px;
+	background-image: url(../img/social-sprite.jpg);
+	background-repeat: no-repeat;
+}
+
+.icn-fb{
+
+}
+.icn-tw{
+	background-position: -25px 0;
+}
+.icn-gp{
+	background-position: -50px 0;
+}
+
+
+
+@media (min-width:768px) {
+	section.content, section.comments{
+		padding-right:35px;	
+		margin:0;
+	}
+}
+
+@media (min-width:992px) {
+
+}
+
+@media(min-width:1200px){
+    
+}
+
