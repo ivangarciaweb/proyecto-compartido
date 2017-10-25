@@ -1,0 +1,100 @@
+//lea dos numeros y suma, resta, división y producto
+procedimiento #suma @numero1 y @numero2
+	@suma = @numero1 + @numero2
+	devolver @suma
+
+procedimiento #resta @numero1 y @numero2
+	@resta = @numero1 - @numero2
+	devolver @resta
+
+procedimiento #producto @numero1 y @numero2
+	@producto = @numero1 * @numero2
+	devolver @producto
+
+procedimiento #division @numero1 y @numero2
+	@division = @numero1 / @numero2
+	devolver @division
+
+pedir @numero1
+pedir @numero2
+
+mostrar #suma @numero1 y @numero2
+mostrar #resta @numero1 y @numero2
+mostrar #producto @numero1 y @numero2
+mostrar #division @numero1 y @numero2
+
+
+
+
+
+
+//lea dos numeros y suma, resta, división y producto
+procedimiento #operar @numero1 y @numero2
+	@suma = @numero1 + @numero2
+	@resta = @numero1 - @numero2
+	@producto = @numero1 * @numero2
+	@division = @numero1 / @numero2
+	mostrar @suma
+	mostrar @resta
+	mostrar @producto
+	mostrar @division
+
+
+pedir @numero1
+pedir @numero2
+
+#operar @numero1 y @numero2
+
+
+
+
+//comparar dos numeros y decir si son iguales
+pedir @numero1
+pedir @numero2
+
+si @numero1 > @numero2
+	mostrar "Es mayor "+@numero1
+
+pero si @numero2 > @numero1
+	mostrar "Es mayor "+@numero2
+
+si no
+	mostrar "Los dos son iguales"
+  
+  
+  
+  //comparar dos numeros y decir si son iguales
+pedir @numero1
+pedir @numero2
+pedir @numero3
+
+si @numero1 > @numero2 && @numero1 > @numero3
+	mostrar "El mayor es: numero1"
+
+si @numero2 > @numero1 && @numero2 > @numero3
+	mostrar "El mayor es: numero2"
+
+si @numero3 > @numero1 && @numero3 > @numero2
+	mostrar "El mayor es: numero3"
+  
+  
+
+  
+  
+//diseña un algoritmo que aplique al precio de un producto un descuento cuando se den los siguientes caracteristicas
+//se aplica un 25% de descuento si:
+// son los meses de invierno (diciembre, enero y febrero)
+// no es viernes o fin de semana
+
+pedir @precioProducto
+pedir @mes
+pedir @dia
+
+si @mes == 'diciembre' || @mes == 'enero' || @mes == 'febrero'
+	si @dia == 'viernes' || @dia == 'sabado' || @dia == 'domingo'
+		mostrar 'El producto no tiene descuento por ser viernes o fin de semana'
+	si no
+		@precioDescuento = @precioProducto * 0.75
+		mostrar @precioDescuento
+si no
+	mostrar 'El producto no tiene descuento porque no está en los meses de invierno'
