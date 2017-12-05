@@ -26,8 +26,20 @@ const a = preparacion(500);
 function clickNumber(number){
     const end = (number * 10)
     for (let index = end - 10; index < end; index++){
-        console.log(a[index-1]);
+        console.log(a[index]);
     }
 }
 
 clickNumber(2);
+
+// en vez de 10 en 10 que el número sea el que decide el usuario para si mismo
+
+
+function clickNumberWithRange(number, range){
+    const end = (number * range);
+    for (let index = end - range; index < end; index++){
+        console.log(a[index]);
+    }
+}
+
+clickNumberWithRange(4,15);
