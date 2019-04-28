@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	var dia = prompt("Por favor introduzca un día:", "");
+	if (dia < 1 || dia > 31){
+		alert('El día introducido no es correcto');
+	}else{
+		var mes = prompt("Por favor introduzca un mes:", "");
+		if (mes < 1 || mes > 12){
+			alert('El mes introducido no es correcto');
+		}else{
+			var anio = prompt("Por favor introduzca un año:", "");
+			if (anio < 1 || anio > 3000){
+				alert('El año introducido no es correcto');
+			}
+			document.write('Formato DD/MM/AAAA: <br/>' + dia + '/' + mes + '/' + anio);	
+			if(mes == 1){mes = 'Enero';}
+			if(mes == 2){mes = 'Febrero';}
+			if(mes == 3){mes = 'Marzo';}
+			if(mes == 4){mes = 'Abril';}
+			if(mes == 5){mes = 'Mayo';}
+			if(mes == 6){mes = 'Junio';}
+			if(mes == 7){mes = 'Julio';}
+			if(mes == 8){mes = 'Agosto';}
+			if(mes == 9){mes = 'Septiembre';}
+			if(mes == 10){mes = 'Octubre';}
+			if(mes == 11){mes = 'Noviembre';}
+			if(mes == 12){mes = 'Diciembre';}
+			document.write('Formato DD de MES de AAAA: <br/>' + dia + ' de ' + mes + ' de ' + anio);					
+		}
+	}	
+
+
+
+</script>
+
+</body>
+</html>
